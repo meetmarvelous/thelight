@@ -9603,7 +9603,7 @@ aside .widget {
     padding-left: 28px;
     position: relative;
     line-height: 1.5;
-    color: #424242;
+    color: white;
     font-size: 15px;
     margin-bottom: 13px;
 }
@@ -9613,7 +9613,7 @@ aside .widget {
     top: 6px;
     font-size: 17px;
 }
-.widget_contact_info ul li a { color: #424242; }
+.widget_contact_info ul li a { color: white; }
 .wm-footer-icons {
     padding: 19px 0px 0px 0px;
     border-top: 2px solid #eeeeee;
@@ -9622,7 +9622,7 @@ aside .widget {
 }
 .wm-footer-icons a {
     display: inline-block;
-    color: #3c4057;
+    color: white;
     margin: 0px 0px 7px 7px;
 }
 .wm-footer-icons a:first-child      { margin-left: 0px; }
@@ -9655,7 +9655,7 @@ aside .widget {
     font-size: 15px;
     margin-bottom: 0px;
     line-height: 24px;
-    color: #424242;
+    color: white;
 }
 .widget_twitter ul li {
     list-style: none;
