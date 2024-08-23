@@ -1,0 +1,938 @@
+<?php
+require_once './include/connect.php';
+
+$query = mysqli_query($dbcon, "SELECT * FROM site_info");
+$site = mysqli_fetch_array($query);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  13:28  -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>The Light Educate</title>
+
+  <!-- Css Files -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link href="css/flaticon.css" rel="stylesheet">
+  <link href="css/slick-slider.css" rel="stylesheet">
+  <link href="css/prettyphoto.css" rel="stylesheet">
+  <link href="build/mediaelementplayer.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="css/color.css" rel="stylesheet">
+  <link href="css/color-two.css" rel="stylesheet">
+  <link href="css/color-three.css" rel="stylesheet">
+  <link href="css/color-four.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="css/datatables/datatables.min.css">
+  <link rel="stylesheet" href="css/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <!--// Main Wrapper \\-->
+  <div class="wm-main-wrapper">
+
+    <!--// Header \\-->
+    <header id="wm-header" class="wm-header-one">
+
+      <!--// TopStrip \\-->
+      <div class="wm-topstrip">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="wm-language">
+                <ul>
+                  <li><a href="#">English</a></li>
+                  <li><a href="#">FAQS</a></li>
+                </ul>
+              </div>
+              <ul class="wm-stripinfo">
+                <li><i class="wmicon-location"></i>Lead City University, Ibadan, Nigeria.</li>
+                <li><i class="wmicon-technology4"></i>+234 705 114 4058</li>
+                <li><i class="wmicon-clock2"></i> Mon - Fri: 7:00am - 6:00pm</li>
+              </ul>
+              <!-- <ul class="wm-stripinfo">
+                <li><i class="wmicon-location"></i> 2925 Swick Hill Street, Charlotte, NC 28202</li>
+                <li><i class="wmicon-technology4"></i> +1 984-700-7129</li>
+                <li><i class="wmicon-clock2"></i> Mon - fri: 7:00am - 6:00pm</li>
+              </ul> -->
+              <ul class="wm-adminuser-section">
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#ModalLogin">login</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#" class="wm-search-btn" data-toggle="modal" data-target="#ModalSearch"><i
+                      class="wmicon-search"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// TopStrip \\-->
+
+      <!--// MainHeader \\-->
+      <div class="wm-main-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3"><a href="" class="wm-logo"><img src="images/thelight.png" alt=""></a>
+            </div>
+            <div class="col-md-9">
+              <!--// Navigation \\-->
+              <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse-1" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a>
+                    </li>
+                    <li><a href="#">About</a>
+                    </li>
+                    <li><a href="category.php">Category</a>
+                    </li>
+                    <li><a href="#">Blog</a>
+                    </li>
+                    <li><a href="">Reviews</a>
+                    </li>
+                    <li><a href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <!--// Navigation \\-->
+              <a href="#" class="wm-header-btn">get started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// MainHeader \\-->
+
+    </header>
+    <!--// Header \\-->
+
+    <!--// Main Banner \\-->
+    <div class="wm-main-banner">
+
+      <div class="wm-banner-one">
+        <div class="wm-banner-one-for">
+          <div class="wm-banner-one-for-layer"> <img src="extra-images/banner-view1-1.jpg" alt=""> </div>
+          <div class="wm-banner-one-for-layer"> <img src="extra-images/banner-view1-2.jpg" alt=""> </div>
+          <div class="wm-banner-one-for-layer"> <img src="extra-images/banner-view1-3.jpg" alt=""> </div>
+          <div class="wm-banner-one-for-layer"> <img src="extra-images/banner-view1-1.jpg" alt=""> </div>
+        </div>
+        <div class="wm-banner-one-nav">
+          <div class="wm-banner-one-nav-layer">
+            <h1>Research Assistance</h1>
+            <p>Get expert support for your research projects.</p>
+            <a href="#" class="wm-banner-btn">learn more</a>
+          </div>
+          <div class="wm-banner-one-nav-layer">
+            <h1>Data Analysis</h1>
+            <p>Get Professional data analysis and visualization services.</p>
+            <a href="#" class="wm-banner-btn">know more</a>
+          </div>
+          <div class="wm-banner-one-nav-layer banner-bgcolor">
+            <h1>Plagiarism Check</h1>
+            <p>Ensure your work is plagiarism-free, original with our detailed screening</p>
+            <a href="#" class="wm-banner-btn">learn more</a>
+          </div>
+          <div class="wm-banner-one-nav-layer">
+            <h1>Consultation Services</h1>
+            <p>Personalized mentoring and academic coaching.</p>
+            <a href="#" class="wm-banner-btn">learn more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--// Main Banner \\-->
+
+    <!--// Main Content \\-->
+    <div class="wm-main-content">
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section whowe-are-full">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 wm-editore-text">
+              <h2 class="wm-left-border wm-color">Welcome to The Light Educate</h2>
+              <p>Welcome to The Light Educate, your premier destination for professional research assistance and data
+                analysis. We specialize in providing high-quality support for your thesis and dissertations across
+                various departments. Our team of experts is committed to helping you achieve academic excellence.</p>
+              <p><b>Our Motto: Research need is limitless, our service goes beyond.</b> </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-4">
+              <div class="wm-search-course">
+                <h3 class="wm-short-title wm-color">Find Your Course</h3>
+                <p>Fill in the form below to find your course:</p>
+                <form>
+                  <ul>
+                    <li>
+                      <div class="wm-radio">
+                        <div class="wm-radio-partition">
+                          <input id="male" type="radio" name="gender" value="male">
+                          <label for="male">by ID</label>
+                        </div>
+                        <div class="wm-radio-partition">
+                          <input id="female" type="radio" name="gender" value="female">
+                          <label for="female">by name</label>
+                        </div>
+                      </div>
+                    </li>
+                    <li> <input type="text" value="Course Name"
+                        onblur="if(this.value == '') { this.value ='Course Name'; }"
+                        onfocus="if(this.value =='Course Name') { this.value = ''; }"> <i class="wmicon-search"></i>
+                    </li>
+                    <li>
+                      <div class="wm-apply-select">
+                        <select>
+                          <option>Category</option>
+                          <option>Category</option>
+                          <option>Category</option>
+                          <option>Category</option>
+                        </select>
+                      </div>
+                    </li>
+                    <li> <input type="submit" value="Search course"> </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="wm-service wm-box-service">
+                <ul>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-suitcase"></i>
+                      <h6><a href="category.php">Art and humanity </a></h6>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-money"></i>
+                      <h6><a href="category.php">Pure science</a></h6>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-school"></i>
+                      <h6><a href="categorys">Social Science</a></h6>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-science"></i>
+                      <h6><a href="category.php">Medical science </a></h6>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-computer"></i>
+                      <h6><a href="category.php">Management science</a></h6>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="wm-box-service-wrap wm-bgcolor">
+                      <i class="wmicon-computer"></i>
+                      <h6><a href="category.php">Education</a></h6>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section wm-whychooseus-full">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-8">
+              <div class="whychooseus-list">
+                <div class="wm-fancy-title">
+                  <h2>Why <span>Choose Us</span></h2>
+                </div>
+                <ul class="row">
+                  <li class="col-md-4">
+                    <span>Expertise</span>
+                    <h6>in multiple research areas</h6>
+                  </li>
+                  <li class="col-md-4">
+                    <span>95%</span>
+                    <h6>client satisfaction rate</h6>
+                  </li>
+                  <li class="col-md-4">
+                    <span>90%</span>
+                    <h6>of students have published their research with our support</h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="wm-questions-studying">
+                <img src="extra-images/ask-questoin-bg.png" alt="">
+                <h3 class="wm-color">Questions about choosing us?</h3>
+                <p>We have a team of dedicated advisers ready to answer any questions:</p>
+                <a class="wm-banner-btn" href="#">ask us now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Project Showcase Table</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="save-stage" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th class="text-center">S/N
+                          </th>
+                          <th>Project Title</th>
+                          <th>Department</th>
+                          <th>Faculty</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                        $count = 1;
+                        $blo2 = mysqli_query($dbcon, "SELECT * FROM projects order by id DESC");
+                        while ($project = mysqli_fetch_array($blo2)) {
+                          $title = substr($project['title'], 0, 40) . "...";
+                          $id = $project['id'];
+                          $permalink = "courses.php?id=" . $id;
+                        ?>
+
+                          <tr>
+                            <td class="text-center"><?php echo $count++; ?></td>
+                            <td> <a href="<?php echo $permalink ; ?>"><?php echo $title ?></a> </td>
+                            <td> <a href="<?php echo $permalink ; ?>"><?php echo $project['department'] ?></a> </td>
+                            <td> <a href="<?php echo $permalink ; ?>"><?php echo $project['faculty'] ?></a> </td>
+
+                          </tr>
+                        <?php } ?>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section wm-plain-service-full">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12">
+              <div class="wm-fancy-title">
+                <h2>Our <span>Services</span></h2>
+              </div>
+              <div class="wm-service wm-plain-service">
+                <ul class="row">
+                  <li class="col-md-3">
+                    <span class="wm-color-two"><i class="wmicon-editing"></i> </span>
+                    <h5><a href="#">Research Assistance</a></h5>
+                    <p><i class="wmicon-mark"></i>Comprehensive support for thesis and dissertations</p>
+                    <p><i class="wmicon-mark"></i>Guidance on research methodology</p>
+                    <p><i class="wmicon-mark"></i>Literature review assistance</p>
+                  </li>
+                  <li class="col-md-3">
+                    <span class="wm-color-two"><i class="wmicon-technology2"></i></span>
+                    <h5><a href="#">Data Analysis</a></h5>
+                    <p><i class="wmicon-mark"></i>Statistical analysis using SPSS, EVIEW, STATA, and NVIVO</p>
+                    <p><i class="wmicon-mark"></i>Data visualization and interpretation</p>
+                    <p><i class="wmicon-mark"></i>Survey data analysis</p>
+                  </li>
+                  <li class="col-md-3">
+                    <span class="wm-color-two"><i class="wmicon-check"></i></span>
+                    <h5><a href="#">Plagiarism Check</a></h5>
+                    <p><i class="wmicon-mark"></i>Thorough plagiarism screening using TURNITIN</p>
+                    <p><i class="wmicon-mark"></i>Detailed reports and feedback</p>
+                  </li>
+                  <li class="col-md-3">
+                    <span class="wm-color-two"><i class="wmicon-people2"></i></span>
+                    <h5><a href="#">Consultation Services</a></h5>
+                    <p><i class="wmicon-mark"></i>One-on-one mentoring and coaching</p>
+                    <p><i class="wmicon-mark"></i>Proposal development and refinement</p>
+                    <p><i class="wmicon-mark"></i>Academic writing support</p>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section wm-upcoming-event-slider-full">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12">
+              <div class="wm-fancytitle-two">
+                <h2>Our Tools and Technologies</h2>
+              </div>
+              <div class="wm-upcoming-event-slider">
+                <div class="wm-upcoming-event-layer">
+                  <div class="wm-banner-addswrap">
+                    <div class="wm-banner-adds-inner">
+                      <h2>SPSS</h2>
+                      <p>For comprehensive statistical analysis</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wm-upcoming-event-layer">
+                  <div class="wm-banner-addswrap">
+                    <div class="wm-banner-adds-inner">
+                      <h2>EVIEW</h2>
+                      <p>For econometric and time-series analysis</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wm-upcoming-event-layer">
+                  <div class="wm-banner-addswrap">
+                    <div class="wm-banner-adds-inner">
+                      <h2>STATA</h2>
+                      <p>For advanced data management and statistical analysis</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wm-upcoming-event-layer">
+                  <div class="wm-banner-addswrap">
+                    <div class="wm-banner-adds-inner">
+                      <h2>NVIVO</h2>
+                      <p>For qualitative data analysis</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="wm-upcoming-event-layer">
+                  <div class="wm-banner-addswrap">
+                    <div class="wm-banner-adds-inner">
+                      <h2>TURNITIN</h2>
+                      <p>For ensuring originality and academic integrity</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="wm-apply-info">
+              <ul>
+                <li class="col-md-4">
+                  <i class="wmicon-editing"></i>
+                  <div class="wm-right-section">
+                    <h2>Hire a Data Analyst</h2>
+                    <p>Professional data analysis and visualization services.</p>
+                    <a href="#" class="applyinfo-btn">apply now</a>
+                  </div>
+                </li>
+                <li class="col-md-4">
+                  <i class="wmicon-telephone"></i>
+                  <div class="wm-right-section">
+                    <h2>For Plagiarism Check</h2>
+                    <p>Ensure your work is plagiarism-free</p>
+                    <a href="#" class="applyinfo-btn">apply now</a>
+                  </div>
+                </li>
+                <li class="col-md-4">
+                  <i class="wmicon-people2"></i>
+                  <div class="wm-right-section">
+                    <h2>Conservatory Talk Open Chat</h2>
+                    <p>We’re here for you in anything you need</p>
+                    <a href="#" class="applyinfo-btn">start chat</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section whowe-are-full">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 wm-editore-text">
+              <h2 class="wm-left-border wm-color">Our Team</h2>
+              <p>Our team of experts includes seasoned researchers, data analysts, and academic writers. With diverse backgrounds and extensive experience, we are well-equipped to handle a wide range of research projects and provide insightful solutions.</p>
+            </div>
+            <div class="col-md-6 wm-editore-text">
+              <h2 class="wm-left-border wm-color">Our Commitment</h2>
+              <p>At The Light Educate, we are dedicated to fostering a culture of excellence in research and education. Our services are designed to meet the unique needs of each client, ensuring personalized support and outstanding results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section wm-testimonial-full">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="wm-fancy-title">
+                <h2>What <span>Clients Say</span></h2>
+                <p>Don't take our word for it, see what our awesome clients say.</p>
+              </div>
+              <div class="wm-testimonial-slider">
+                <div class="wm-testimonial-slider-wrap">
+                  <p>I was thoroughly impressed with the quality of service provided by The Light Educate. Their expert guidance on my dissertation significantly improved the depth and rigor of my research. Their data analysis capabilities using SPSS and STATA were particularly invaluable. The AI Turnitin report assured me that my work was free of AI-generated content. Highly recommended!.</p>
+                  <figure>
+                    <a href="#" class="wm-testimonial-thumb"><img src="extra-images/profile.png" alt=""></a>
+                    <figcaption>
+                      <h5><a href="#">Dr. Victoria Johnson</a></h5> <span>Nigeria</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="wm-testimonial-slider-wrap">
+                  <p>The Light Educate has been instrumental in the success of my research. Their team’s proficiency in NVIVO helped me manage and analyze my qualitative data effectively. The personalized support I received throughout my study was exceptional. The AI Turnitin report provided me with confidence that my work was original and AI-free.</p>
+                  <figure>
+                    <a href="#" class="wm-testimonial-thumb"><img src="extra-images/profile.png" alt=""></a>
+                    <figcaption>
+                      <h5><a href="#">James Adesola</a></h5> <span>Nigeria</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="wm-testimonial-slider-wrap">
+                  <p>The Light Educate’s expertise in econometric analysis using EVIEW was critical for my research project. Their attention to detail and thorough understanding of complex statistical methods ensured accurate and reliable results. The AI Turnitin report confirmed the authenticity of my work, giving me added peace of mind.</p>
+                  <figure>
+                    <a href="#" class="wm-testimonial-thumb"><img src="extra-images/profile.png" alt=""></a>
+                    <figcaption>
+                      <h5><a href="#">Prof. Emmanuel Okafor</a></h5> <span>Nigeria</span>
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="wm-testimonial-slider-wrap">
+                  <p>I am extremely grateful to The Light Educate for their comprehensive research support. Their TURNITIN plagiarism checks, including the AI content verification, gave me peace of mind, knowing that my work was original and met the highest academic standards. The team’s professionalism and dedication are truly commendable.</p>
+                  <figure>
+                    <a href="#" class="wm-testimonial-thumb"><img src="extra-images/profile.png" alt=""></a>
+                    <figcaption>
+                      <h5><a href="#">Dr. Michael Williams</a></h5> <span>Nigeria</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+
+      <!--// Main Section \\-->
+      <div class="wm-main-section wm-contact-full">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12">
+
+              <div class="wm-contact-tab">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#home" aria-controls="home" data-toggle="tab">Contact Us</a></li>
+                  <li><a href="#profile" aria-controls="profile" data-toggle="tab">Information Details</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="home">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="wm-map">
+                          <div id="map"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-8">
+                        <div class="wm-contact-form">
+                          <span>Talk To Us Today</span>
+                          <form>
+                            <ul>
+                              <li>
+                                <i class="wmicon-black"></i>
+                                <input type="text" value="Name" onblur="if(this.value == '') { this.value ='Name'; }"
+                                  onfocus="if(this.value =='Name') { this.value = ''; }">
+                              </li>
+                              <li>
+                                <i class="wmicon-symbol3"></i>
+                                <input type="text" value="E-mail"
+                                  onblur="if(this.value == '') { this.value ='E-mail'; }"
+                                  onfocus="if(this.value =='E-mail') { this.value = ''; }">
+                              </li>
+                              <li>
+                                <i class="wmicon-technology4"></i>
+                                <input type="text" value="Phone" onblur="if(this.value == '') { this.value ='Phone'; }"
+                                  onfocus="if(this.value =='Phone') { this.value = ''; }">
+                              </li>
+                              <li>
+                                <i class="wmicon-web2"></i>
+                                <textarea placeholder="Message"></textarea>
+                              </li>
+                              <li> <input type="submit" value="Send Message"> </li>
+                            </ul>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="profile">
+                    <span class="wm-contact-title">Contact Info</span>
+                    <div class="wm-contact-service">
+                      <ul class="row">
+                        <li class="col-md-4">
+                          <span class="wm-service-icon"><i class="wmicon-pin"></i></span>
+                          <h5 class="wm-color">Address</h5>
+                          <p>Lead City University, Ibadan, Nigeria.</p>
+                        </li>
+                        <li class="col-md-4">
+                          <span class="wm-service-icon"><i class="wmicon-phone"></i></span>
+                          <h5 class="wm-color">Phone & Fax</h5>
+                          <p>+234 (0) 705-114-4058</p>
+                        </li>
+                        <li class="col-md-4">
+                          <span class="wm-service-icon"><i class="wmicon-letter"></i></span>
+                          <h5 class="wm-color">E-mail</h5>
+                          <p><a href="mailto:name@email.com">Info@thelighteducate.com</a> <a
+                              href="mailto:name@email.com">support@thelighteducate.com</a></p>
+                        </li>
+                      </ul>
+                    </div>
+                    <ul class="contact-social-icon">
+                      <li><a href="#"><i class="wm-color wmicon-social5"></i> Facebook</a></li>
+                      <li><a href="#"><i class="wm-color wmicon-social4"></i> Twitter</a></li>
+                      <li><a href="#"><i class="wm-color wmicon-social3"></i> Linkedin</a></li>
+                      <li><a href="#"><i class="wm-color wmicon-vimeo"></i> Vimeo</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!--// Main Section \\-->
+
+    </div>
+    <!--// Main Content \\-->
+
+
+    <!--// Footer \\-->
+    <footer id="wm-footer" class="wm-footer-two">
+
+      <!--// FooterWidgets \\-->
+      <div class="wm-footer-widget">
+        <div class="container">
+          <div class="row">
+
+            <aside class="widget widget_contact_info col-md-4">
+              <a href="" class="wm-footer-logo"><img src="images/light.png" alt=""></a>
+              <ul>
+                <li><i class="wmicon-pin"></i>Lead City University, Ibadan, Nigeria.</li>
+                <li><i class="wmicon-phone"></i> +234 (0) 705-114-4058 <br> +234 705 114 4058</li>
+                <li><i class="wmicon-letter"></i> <a href="mailto:name@email.com">info@university.com</a> <a
+                    href="mailto:name@email.com">support@thelighteducate.com</a></li>
+              </ul>
+              <div class="wm-footer-icons">
+                <a href="#" class="wmicon-social5"></a>
+                <a href="#" class="wmicon-social4"></a>
+                <a href="#" class="wmicon-social3"></a>
+                <a href="#" class="wmicon-vimeo"></a>
+              </div>
+            </aside>
+
+            <aside class="widget widget_archive col-md-4">
+              <div class="wm-footer-widget-title">
+                <h2>Quick Links</h2>
+              </div>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Category</a></li>
+                <li><a href="#">404 Page</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </aside>
+
+            <aside class="col-md-4 widget wm_working_hours">
+              <div class="wm-footer-widget-title">
+                <h2>Working Hours</h2>
+              </div>
+              <ul>
+                <li>Monday <span>8am - 6pm</span></li>
+                <li>Tuesday <span>8am - 6pm</span></li>
+                <li>Wednesday <span>8am - 6pm</span></li>
+                <li>Thursday <span>8am - 6pm</span></li>
+                <li>Friday <span>8am - 6pm</span></li>
+                <li>Saturday <span>Closed</span></li>
+                <li>Sunday <span>Closed</span></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <!--// FooterWidgets \\-->
+
+      <div class="clearfix"></div>
+      <!--// FooterCopyRight \\-->
+      <div class="wm-copyright-two">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6"> <span><i class="wmicon-nature"></i> Ibadan, Nigeria 2°F / -17°C</span> </div>
+            <div class="col-md-6">
+              <p><a target="_blank" href="https://bio.link/meetmarvelous">Marvelbyte</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// FooterCopyRight \\-->
+
+    </footer>
+
+    <div class="clearfix"></div>
+  </div>
+  <!--// Main Wrapper \\-->
+
+  <!-- ModalLogin Box -->
+  <div class="modal fade" id="ModalLogin" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <div class="wm-modallogin-form wm-login-popup">
+            <span class="wm-color">Login to Your Account</span>
+            <form>
+              <ul>
+                <li> <input type="text" value="Your Username"
+                    onblur="if(this.value == '') { this.value ='Your Username'; }"
+                    onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
+                <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }"
+                    onfocus="if(this.value =='password') { this.value = ''; }"> </li>
+                <li> <a href="#" class="wm-forgot-btn">Forgot Password?</a> </li>
+                <li> <input type="submit" value="Sign In"> </li>
+              </ul>
+            </form>
+            <span class="wm-color">or try our socials</span>
+            <ul class="wm-login-social-media">
+              <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
+              <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
+              <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+            </ul>
+            <p>Not a member yet? <a href="#">Sign-up Now!</a></p>
+          </div>
+          <div class="wm-modallogin-form wm-register-popup">
+            <span class="wm-color">create Your Account today</span>
+            <form>
+              <ul>
+                <li> <input type="text" value="Your Username"
+                    onblur="if(this.value == '') { this.value ='Your Username'; }"
+                    onfocus="if(this.value =='Your Username') { this.value = ''; }"> </li>
+                <li> <input type="text" value="Your E-mail" onblur="if(this.value == '') { this.value ='Your E-mail'; }"
+                    onfocus="if(this.value =='Your E-mail') { this.value = ''; }"> </li>
+                <li> <input type="password" value="password" onblur="if(this.value == '') { this.value ='password'; }"
+                    onfocus="if(this.value =='password') { this.value = ''; }"> </li>
+                <li> <input type="text" value="Confirm Password"
+                    onblur="if(this.value == '') { this.value ='Confirm Password'; }"
+                    onfocus="if(this.value =='Confirm Password') { this.value = ''; }"> </li>
+                <li> <input type="submit" value="Create Account"> </li>
+              </ul>
+            </form>
+            <span class="wm-color">or signup with your socials:</span>
+            <ul class="wm-login-social-media">
+              <li><a href="#"><i class="wmicon-social5"></i> Facebook</a></li>
+              <li class="wm-twitter-color"><a href="#"><i class="wmicon-social4"></i> twitter</a></li>
+              <li class="wm-googleplus-color"><a href="#"><i class="fa fa-google-plus-square"></i> Google+</a></li>
+            </ul>
+            <p>Already a member? <a href="#">Sign-in Here!</a></p>
+          </div>
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- ModalLogin Box -->
+
+  <!-- ModalSearch Box -->
+  <div class="modal fade" id="ModalSearch" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <div class="wm-modallogin-form">
+            <span class="wm-color">Search Your KeyWord</span>
+            <form>
+              <ul>
+                <li> <input type="text" value="Keywords..." onblur="if(this.value == '') { this.value ='Keywords...'; }"
+                    onfocus="if(this.value =='Keywords...') { this.value = ''; }"> </li>
+                <li> <input type="submit" value="Search"> </li>
+              </ul>
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <!-- ModalSearch Box -->
+
+  <!-- jQuery (necessary for JavaScript plugins) -->
+  <script type="text/javascript" src="script/jquery.js"></script>
+  <script type="text/javascript" src="script/modernizr.js"></script>
+  <script type="text/javascript" src="script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="script/jquery.prettyphoto.js"></script>
+  <script type="text/javascript" src="script/jquery.countdown.min.js"></script>
+  <script type="text/javascript" src="script/fitvideo.js"></script>
+  <script type="text/javascript" src="script/skills.js"></script>
+  <script type="text/javascript" src="script/slick.slider.min.js"></script>
+  <script type="text/javascript" src="script/waypoints-min.js"></script>
+  <script type="text/javascript" src="build/mediaelement-and-player.min.js"></script>
+  <script type="text/javascript" src="script/isotope.min.js"></script>
+  <script type="text/javascript" src="script/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="script/functions.js"></script>
+
+  <script src="css/datatables/datatables.min.js"></script>
+  <script src="css/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+  <script>
+    "use strict";
+
+    $("[data-checkboxes]").each(function() {
+      var me = $(this),
+        group = me.data('checkboxes'),
+        role = me.data('checkbox-role');
+
+      me.change(function() {
+        var all = $('[data-checkboxes="' + group + '"]:not([data-checkbox-role="dad"])'),
+          checked = $('[data-checkboxes="' + group + '"]:not([data-checkbox-role="dad"]):checked'),
+          dad = $('[data-checkboxes="' + group + '"][data-checkbox-role="dad"]'),
+          total = all.length,
+          checked_length = checked.length;
+
+        if (role == 'dad') {
+          if (me.is(':checked')) {
+            all.prop('checked', true);
+          } else {
+            all.prop('checked', false);
+          }
+        } else {
+          if (checked_length >= total) {
+            dad.prop('checked', true);
+          } else {
+            dad.prop('checked', false);
+          }
+        }
+      });
+    });
+
+    $("#table-1").dataTable({
+      "columnDefs": [{
+        "sortable": false,
+        "targets": [2, 3]
+      }]
+    });
+    $("#table-2").dataTable({
+      "columnDefs": [{
+        "sortable": false,
+        "targets": [0, 2, 3]
+      }],
+      order: [
+        [1, "asc"]
+      ] //column indexes is zero based
+
+    });
+    $('#save-stage').DataTable({
+      "scrollX": true,
+      stateSave: true
+    });
+    $('#tableExport').DataTable({
+      dom: 'Bfrtip',
+      buttons: [
+        'copy', 'csv', 'excel', 'pdf', 'print'
+      ]
+    });
+  </script>
+</body>
+
+<!--  15:20  -->
+
+</html>
