@@ -1,6 +1,5 @@
 <?php
 require_once '../include/connect.php';
-require_once '../security.php';
 
 if (isset($_GET['id'])) {
     $id = mysqli_real_escape_string($dbcon, (int) $_GET['id']);

@@ -64,7 +64,7 @@ $site = mysqli_fetch_array($query);
                 </ul>
               </div>
               <ul class="wm-stripinfo">
-                <li><i class="wmicon-location"></i>Lead City University, Ibadan, Nigeria.</li>
+                <li><i class="wmicon-location"></i>Nigeria.</li>
                 <li><i class="wmicon-technology4"></i>+234 705 114 4058</li>
                 <li><i class="wmicon-clock2"></i> Mon - Fri: 7:00am - 6:00pm</li>
               </ul>
@@ -705,9 +705,9 @@ $site = mysqli_fetch_array($query);
             <aside class="widget widget_contact_info col-md-4">
               <a href="" class="wm-footer-logo"><img src="images/light.png" alt=""></a>
               <ul>
-                <li><i class="wmicon-pin"></i>Lead City University, Ibadan, Nigeria.</li>
+                <li><i class="wmicon-pin"></i>Nigeria.</li>
                 <li><i class="wmicon-phone"></i> +234 (0) 705-114-4058 <br> +234 705 114 4058</li>
-                <li><i class="wmicon-letter"></i> <a href="mailto:name@email.com">info@university.com</a> <a
+                <li><i class="wmicon-letter"></i> <a href="mailto:name@email.com">info@thelighteducate.com</a> <a
                     href="mailto:name@email.com">support@thelighteducate.com</a></li>
               </ul>
               <div class="wm-footer-icons">
